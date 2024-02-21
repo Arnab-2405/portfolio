@@ -78,7 +78,7 @@ function Intro() {
 
   useEffect(() => {
     if (redirect) {
-      navigate("/");
+      navigate("/home");
     }
   }, [redirect, navigate]);
 
