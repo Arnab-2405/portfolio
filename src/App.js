@@ -7,14 +7,11 @@ import Intro from "./components/Intro";
 function App() {
   return (
     <>
-      {/* <Landing></Landing> */}
-      {/* <Loading></Loading> */}
-
       <BrowserRouter>
         <Routes>
-          <Route path="/" Component={Loading}></Route>
-          <Route path="/Landing" Component={Landing}></Route>
-          <Route path="/Intro" Component={Intro}></Route>
+          <Route path="/" element={<Loading></Loading>}></Route>
+          <Route path="/Landing" element={<Landing></Landing>}></Route>
+          <Route path="/Intro" element={<Intro></Intro>}></Route>
         </Routes>
       </BrowserRouter>
     </>
