@@ -1,0 +1,79 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 1);
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.loading-bar {
+  color: #f4f4f4;
+  height: 0.4vh;
+  width: 100vw;
+  background: #f4f4f4;
+  border-radius: 0 0 0 0;
+  animation: loader-bar 5000ms normal;
+}
+
+@keyframes loader-bar {
+  0% {
+    width: 0vw;
+    border-radius: 0 10% 10% 0;
+  }
+  99% {
+    width: 99vw;
+    border-radius: 0 10% 10% 0;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+.number {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  color: #f4f4f4;
+}
+
+.base {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  font-size: 6vh;
+  z-index: 5;
+}
+
+.initializing-2 {
+  z-index: 10;
+  color: transparent;
+  text-shadow: 0 0 8px #f4f4f4;
+  animation: unblur 600ms ease-in-out infinite;
+}
+
+@keyframes unblur {
+  0% {
+    clip-path: polygon(0 0, 40% 0, 40% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 140% 0, 140% 100%, 100% 100%);
+  }
+}
+
+.highlight {
+  width: 0.5%;
+  height: 1%;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  box-shadow: -1px -1px 10vh 2vh #f4f4f4;
+  border-radius: 30%;
+}
