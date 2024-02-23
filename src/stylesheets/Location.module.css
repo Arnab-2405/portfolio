@@ -1,0 +1,13 @@
+.location {
+  color: red;
+  z-index: 10;
+  position: sticky;
+  top: 15vh;
+  right: 2vw;
+}
+
+.xAxis,
+.yAxis {
+  display: flex;
+  justify-content: end;
+}

@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import style from "../stylesheets/Navbar.module.css";
+import Location from "./Location";
 
 function Navbar() {
-  let time = new Date().toLocaleTimeString();
+  // let time = new Date().toLocaleTimeString();
 
-  const [ctime, setTime] = useState(time);
-  const UpdateTime = () => {
-    time = new Date().toLocaleTimeString();
-    setTime(time);
-    console.log(time);
-  };
-  setInterval(UpdateTime);
+  // const [ctime, setTime] = useState(time);
+  // const UpdateTime = () => {
+  //   time = new Date().toLocaleTimeString();
+  //   setTime(time);
+  // };
+  // setInterval(UpdateTime);
+
+
 
   return (
     <>
@@ -33,8 +35,10 @@ function Navbar() {
             <li>Contact</li>
           </ul>
         </div>
-        <div className={style.time}>{ctime}</div>
+        <div className={style.time}>clock{/* {ctime} */}</div>
+        {/* TODO */}
       </div>
+      {/* <Location></Location>*/}
     </>
   );
 }
