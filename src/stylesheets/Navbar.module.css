@@ -17,8 +17,6 @@
   /* border-radius: 0 0 5% 5%; */
   box-shadow: 0 1vh 2vh #000;
   /* TODO Change shadow color on scroll */
-
-  border: 1px solid red;
 }
 
 .header {
@@ -51,4 +49,3 @@
   flex-grow: 0;
   margin-right: 5vw;
 }
-
