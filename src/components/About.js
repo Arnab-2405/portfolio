@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../stylesheets/About.module.css";
 // import picture from "../assets/Profile.jpg";
-import picture from "../assets/morning_forest.mp4";
+import picture from "../assets/black_background.mp4";
 
 function About() {
   return (
