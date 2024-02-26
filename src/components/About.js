@@ -20,7 +20,7 @@ function About() {
         </div>
       </div>
       <div className={style.imageBox}>
-        <img src={picture} alt="Profile Picture"></img>
+        <img src={picture} alt="Profile"></img>
       </div>
     </div>
   );

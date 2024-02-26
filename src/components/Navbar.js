@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "../stylesheets/Navbar.module.css";
-import Location from "./Location";
 
 function Navbar() {
   // let time = new Date().toLocaleTimeString();
@@ -12,8 +11,6 @@ function Navbar() {
   //   setTime(time);
   // };
   // setInterval(UpdateTime);
-
-
 
   return (
     <>

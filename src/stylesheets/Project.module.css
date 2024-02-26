@@ -1,4 +1,10 @@
-content{
-    width: 100vw;
-    height: 100vh;
+.controls{
+    width: 100%;
+    min-height: max-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    display: none;
 }
