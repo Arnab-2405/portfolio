@@ -1,10 +1,27 @@
-.controls{
-    width: 100%;
-    min-height: max-content;
-    display: flex;
-    justify-content: space-around;
+.controls {
+  width: 100%;
+  min-height: max-content;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1b211e;
+  padding-top: 0%;
 }
 
-input{
-    display: none;
+input {
+  display: none;
+}
+
+.previous,
+.next {
+  background: none;
+  outline: none;
+  padding: none;
+  margin: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  color: #e3f7d3;
+  font-size: 1.3rem;
+  cursor: pointer;
 }

@@ -4,42 +4,39 @@ import style from "../stylesheets/Project.module.css";
 import { useEffect } from "react";
 
 function Project() {
-  // let counter = 0;
-
   const [frwdArrw, setFrwdArrw] = useState(0);
-  const [backArrw, setBackArrw] = useState(9-frwdArrw);
+  const [backArrw, setBackArrw] = useState(9 - frwdArrw);
 
   const handleNextClick = () => {
     setFrwdArrw(frwdArrw + 1);
-    setBackArrw(9-frwdArrw);
+    setBackArrw(9 - frwdArrw);
     simulateKeyPresses(frwdArrw);
   };
 
   const handlePrevClick = () => {
     setBackArrw(backArrw + 1);
-    setFrwdArrw(9-backArrw);
+    setFrwdArrw(9 - backArrw);
     simulateKeyPresses(backArrw);
   };
 
   const inputRef = useRef(null);
-
   useEffect(() => {
+    const input = inputRef.current;
     const handleKeyPress = (event) => {
       if (event.key >= "0" && event.key <= "9") {
         console.log(`Key ${event.key} pressed`);
       }
     };
 
-    inputRef.current.addEventListener("keydown", handleKeyPress);
+    input.addEventListener("keydown", handleKeyPress);
 
     return () => {
-      inputRef.current.removeEventListener("keydown", handleKeyPress);
+      input.removeEventListener("keydown", handleKeyPress);
     };
   }, []);
 
   const simulateKeyPresses = (value) => {
     [value].forEach((key) => {
-      console.log("fwd "+frwdArrw+" bak"+backArrw )
       const event = new KeyboardEvent("keydown", {
         key: key,
         code: key,
@@ -56,20 +53,21 @@ function Project() {
       <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
       <input ref={inputRef} type="text"></input>
       <div className={style.controls}>
-        <button
+        <div
           className={style.previous}
           onClick={handlePrevClick}
           disabled={frwdArrw === 0}
         >
-          Left
-        </button>
-        <button
+          Previous
+        </div>
+        <div></div>
+        <div
           className={style.next}
           onClick={handleNextClick}
-          disabled={!(frwdArrw+1<=5)}
+          disabled={!(frwdArrw + 1 <= 5)}
         >
-          Right
-        </button>
+          Next
+        </div>
       </div>
     </>
   );

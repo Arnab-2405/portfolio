@@ -1,0 +1,50 @@
+[
+    {
+        "id":"1",
+        "title":"title 1",
+        "brief":"something in breif",
+        "description":"description 1",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    },
+    {
+        "id":"2",
+        "title":"title 2",
+        "brief":"something in breif",
+        "description":"description 2",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    },
+    {
+        "id":"3",
+        "title":"title 3",
+        "brief":"something in breif",
+        "description":"description 3",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    },
+    {
+        "id":"4",
+        "title":"title 4",
+        "brief":"something in breif",
+        "description":"description 4",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    },
+    {
+        "id":"5",
+        "title":"title 5",
+        "brief":"something in breif",
+        "description":"description 5",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    },
+    {
+        "id":"6",
+        "title":"title 6",
+        "brief":"something in breif",
+        "description":"description 6",
+        "techStack":["React","Javascript"],
+        "images":["../assets/projectResource/image","../assets/projectResource/image"]
+    }
+]
