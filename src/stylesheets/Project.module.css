@@ -1,11 +1,14 @@
+canvas {
+  width: 100vw;
+  height: 55vh;
+}
+
 .controls {
   width: 100%;
-  min-height: max-content;
-  height: 8vh;
+  max-height: max-content;
   display: flex;
   justify-content: space-around;
   background-color: #1b211e;
-  padding-top: 0%;
 }
 
 input {
@@ -18,10 +21,57 @@ input {
   outline: none;
   padding: none;
   margin: none;
+  border: none;
   box-shadow: none;
   display: flex;
   align-items: center;
   color: #e3f7d3;
   font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.textFields {
+  width: 100%;
+  height: min-content;
+  background-color: #1b211e;
+  color: #e3f7d3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.title,
+.brief {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+.brief {
+  font-size: 2rem;
+  padding-top: 2%;
+  flex-basis: 50%;
+}
+
+.newPage {
+  flex-basis: 100%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.unstyle {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  color: #e3f7d3;
+}
+
+.unstyle:hover {
+  text-decoration: underline;
   cursor: pointer;
 }

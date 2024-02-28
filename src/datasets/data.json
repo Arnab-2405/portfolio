@@ -3,7 +3,7 @@
         "id":"1",
         "title":"title 1",
         "brief":"something in breif",
-        "description":"description 1",
+        "description":"Lorem ipsum dolor sit amet. Qui galisum architecto ut excepturi excepturi aut omnis numquam aut recusandae ipsa et accusamus amet qui expedita voluptatum.",
         "techStack":["React","Javascript"],
         "images":["../assets/projectResource/image","../assets/projectResource/image"]
     },

@@ -2,21 +2,26 @@ import React, { useRef, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import style from "../stylesheets/Project.module.css";
 import { useEffect } from "react";
+import data from "../datasets/data.json";
 
 function Project() {
   const [frwdArrw, setFrwdArrw] = useState(0);
   const [backArrw, setBackArrw] = useState(9 - frwdArrw);
 
+  const [pageId, setPageId] = useState(1);
+
   const handleNextClick = () => {
     setFrwdArrw(frwdArrw + 1);
     setBackArrw(9 - frwdArrw);
     simulateKeyPresses(frwdArrw);
+    setPageId(pageId + 1);
   };
 
   const handlePrevClick = () => {
     setBackArrw(backArrw + 1);
     setFrwdArrw(9 - backArrw);
     simulateKeyPresses(backArrw);
+    setPageId(pageId - 1);
   };
 
   const inputRef = useRef(null);
@@ -50,23 +55,32 @@ function Project() {
 
   return (
     <>
-      <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
+      <div className={style.element}>
+        <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
+      </div>
       <input ref={inputRef} type="text"></input>
       <div className={style.controls}>
-        <div
+        <button
           className={style.previous}
           onClick={handlePrevClick}
-          disabled={frwdArrw === 0}
+          disabled={pageId === 1}
         >
           Previous
-        </div>
+        </button>
         <div></div>
-        <div
+        <button
           className={style.next}
           onClick={handleNextClick}
-          disabled={!(frwdArrw + 1 <= 5)}
+          disabled={pageId === 6}
         >
           Next
+        </button>
+      </div>
+      <div className={style.textFields}>
+        <div className={style.title}>{data[pageId - 1].title}</div>
+        <div className={style.brief}>{data[pageId - 1].brief}</div>
+        <div className={style.newPage}>
+          <button className={style.unstyle}>See More</button>
         </div>
       </div>
     </>
