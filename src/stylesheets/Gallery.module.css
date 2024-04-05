@@ -1,0 +1,35 @@
+.header {
+  font-size: 3rem;
+  margin: 4%;
+}
+
+.gridContainer {
+  height: max-content;
+  width: 100%;
+  border: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  height: max-content;
+  width: 80%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.gridChild {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+}
+
+.gridChild:hover {
+  background-color: rebeccapurple;
+  transform: scale(1.5);
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}

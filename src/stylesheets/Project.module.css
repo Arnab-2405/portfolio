@@ -63,15 +63,3 @@ input {
   display: flex;
   justify-content: center;
 }
-
-.unstyle {
-  background: transparent;
-  border: none;
-  font-size: 1.4rem;
-  color: #e3f7d3;
-}
-
-.unstyle:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}

@@ -56,7 +56,7 @@ function Project() {
   return (
     <>
       <div className={style.element}>
-        <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
+        {/* <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" /> */}
       </div>
       <input ref={inputRef} type="text"></input>
       <div className={style.controls}>
@@ -80,7 +80,6 @@ function Project() {
         <div className={style.title}>{data[pageId - 1].title}</div>
         <div className={style.brief}>{data[pageId - 1].brief}</div>
         <div className={style.newPage}>
-          <button className={style.unstyle}>See More</button>
         </div>
       </div>
     </>
