@@ -1,0 +1,58 @@
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.base {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  z-index: 5;
+}
+
+.image {
+  background-image: url("../assets/NewDelhi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.overlay {
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.textLayer {
+  z-index: 7;
+  color: #fee720;
+}
+
+input {
+  display: inline-block;
+  outline: none;
+  flex-basis: 90%;
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+
+.name,
+.email,
+.message {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.subHead {
+  flex-basis: 10%;
+}

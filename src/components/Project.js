@@ -56,7 +56,7 @@ function Project() {
   return (
     <>
       <div className={style.element}>
-        <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
+        {/* <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" /> */}
       </div>
       <input ref={inputRef} type="text"></input>
       <div className={style.controls}>
