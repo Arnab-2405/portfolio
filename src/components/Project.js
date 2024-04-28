@@ -55,7 +55,7 @@ function Project() {
 
   return (
     <>
-      <div className={style.element}>
+      <div className={style.element} id="project">
         <Spline scene="https://prod.spline.design/k8ati3Tdxtt1T81A/scene.splinecode" />
       </div>
       <input ref={inputRef} type="text"></input>

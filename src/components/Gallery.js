@@ -8,7 +8,7 @@ function Gallery() {
 
   return (
     <>
-      <div className={styles.header}>
+      <div className={styles.header} id="gallery">
         Some of the best Moments Captured by me
       </div>
 

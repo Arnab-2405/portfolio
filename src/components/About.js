@@ -5,7 +5,7 @@ import picture from "../assets/black_background.mp4";
 
 function About() {
   return (
-    <div className={style.content}>
+    <div className={style.content} id="about">
       <div className={style.textBox}>
         <div className={style.topText}>
           <span>Howdy, </span>I'm

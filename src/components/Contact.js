@@ -4,7 +4,7 @@ import style from "../stylesheets/Contact.module.css";
 function Contact() {
   return (
     <>
-      <div className={style.content}>
+      <div className={style.content} id="contact">
         <div className={[style.base, style.image].join(" ")}></div>
         <div className={[style.overlay, style.base].join(" ")}></div>
         <div className={[style.base, style.textLayer].join(" ")}>
