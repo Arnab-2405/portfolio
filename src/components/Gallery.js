@@ -1,15 +1,10 @@
 import React from "react";
 import styles from "../stylesheets/Gallery.module.css";
+import dataSource from "../datasets/gallery.json";
 
 function Gallery() {
-  const images = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
-  ]; // Replace with your image paths
+  const numberOfImages = 10;
+  const array = Array(numberOfImages).fill(0);
 
   return (
     <>
@@ -17,14 +12,12 @@ function Gallery() {
         Some of the best Moments Captured by me
       </div>
 
-      <div className={styles.gridContainer}>
-        <div className={styles.grid}>
-          {images.map((image, index) => (
-            <div key={index} className={styles.gridChild}>
-              {image}
-            </div>
-          ))}
-        </div>
+      <div className={styles.content}>
+        {dataSource.map((image, index) => (
+          <div key={index} className={styles.box}>
+            <img src={image.imgSrc}></img>
+          </div>
+        ))}
       </div>
     </>
   );
