@@ -1,62 +1,77 @@
 [
     {
         "id": 1,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 2,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 3,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 4,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 5,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 6,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 7,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 8,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 9,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 10,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 11,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 12,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 13,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       },
       {
         "id": 14,
-        "imgSrc": "/assets/image1.jpg"
+        "imgSrc": "/assets/image1.jpg",
+        "alt":"some text"
       },
       {
         "id": 15,
-        "imgSrc": "/assets/image2.jpg"
+        "imgSrc": "/assets/image2.jpg",
+        "alt":"some text"
       }
 ]

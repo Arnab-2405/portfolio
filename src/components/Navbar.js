@@ -1,56 +1,74 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import style from "../stylesheets/Navbar.module.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  // let time = new Date().toLocaleTimeString();
+  const [ctime, setCtime] = useState("");
 
-  // const [ctime, setTime] = useState(time);
-  // const UpdateTime = () => {
-  //   time = new Date().toLocaleTimeString();
-  //   setTime(time);
-  // };
-  // setInterval(UpdateTime);
+  useEffect(() => {
+    const intervalId = setInterval(updateTime, 10);
+    return () => clearInterval(intervalId);
+  }, []);
 
+  const updateTime = () => {
+    const time = new Date();
+    const hours = time.getUTCHours().toString().padStart(2, "0");
+    const minutes = time.getUTCMinutes().toString().padStart(2, "0");
+    const formattedTime = `${hours}:${minutes} GMT`;
+    setCtime(formattedTime);
+  };
 
   useEffect(() => {
     const handleClick = (id) => {
       const element = document.getElementById(id);
       if (element) {
-        let offset = 100; // Default offset
+        let offset = 100;
         if (id === "contact") {
-          offset = 0; // Offset for the "Contact" component
+          offset = 0;
         }
         const elementPosition = element.offsetTop - offset;
         window.scrollTo({
           top: elementPosition,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
     };
 
-    // Function to handle clicks on links
     const handleLinkClick = (id) => {
       return (event) => {
-        event.preventDefault(); // Prevent default anchor behavior
-        handleClick(id); // Call handleClick with the target ID
+        event.preventDefault();
+        handleClick(id);
       };
     };
 
-    // Add event listeners to each link
-    const links = document.querySelectorAll('.scroll-link');
-    links.forEach(link => {
-      const id = link.getAttribute('href').substring(1); // Extract target ID from href
-      link.addEventListener('click', handleLinkClick(id)); // Add click event listener
+    const links = document.querySelectorAll(".scroll-link");
+    links.forEach((link) => {
+      const id = link.getAttribute("href").substring(1);
+      link.addEventListener("click", handleLinkClick(id));
     });
 
-    // Clean up event listeners on component unmount
     return () => {
-      links.forEach(link => {
-        const id = link.getAttribute('href').substring(1);
-        link.removeEventListener('click', handleLinkClick(id));
+      links.forEach((link) => {
+        const id = link.getAttribute("href").substring(1);
+        link.removeEventListener("click", handleLinkClick(id));
       });
     };
-  }, []); // Empty dependency array ensures the effect runs only once after component mount
+  }, []);
+
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mouseRef = useRef();
+
+  useEffect(() => {
+    mouseRef.current = (event) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", mouseRef.current);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseRef.current);
+    };
+  }, []);
 
   return (
     <>
@@ -59,20 +77,41 @@ function Navbar() {
         <div className={style.list}>
           <ul>
             <li>
-              <a href="#home" className="scroll-link" style={{ textDecoration: "none", color: "#F4F4F4" }}>
+              <Link
+                to={"/Landing"}
+                style={{ textDecoration: "none", color: "#F4F4F4" }}
+              >
                 Home
+              </Link>
+            </li>
+            <li>
+              <a href="#about" className="scroll-link">
+                About
               </a>
             </li>
-            <li><a href="#about" className="scroll-link">About</a></li>
-            <li><a href="#project" className="scroll-link">Project</a></li>
-            <li><a href="#gallery" className="scroll-link">Gallery</a></li>
-            <li><a href="#contact" className="scroll-link">Contact</a></li>
+            <li>
+              <a href="#project" className="scroll-link">
+                Project
+              </a>
+            </li>
+            <li>
+              <a href="#gallery" className="scroll-link">
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="scroll-link">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
-        <div className={style.time}>clock{/* {ctime} */}</div>
-        {/* TODO */}
+        <div className={style.time}>{ctime}</div>
       </div>
-      {/* <Location></Location>*/}
+      <div className={style.location}>
+        <div className={style.xAxis}>{mousePosition.x} : X</div>
+        <div className={style.yAxis}>{mousePosition.y} : Y</div>
+      </div>
     </>
   );
 }
