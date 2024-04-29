@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [ctime, setCtime] = useState("");
+  const [hoursDV, setHours] =useState("");
+  const [minutesDV, setMinutes] =useState("");
 
   useEffect(() => {
     const intervalId = setInterval(updateTime, 10);
@@ -14,6 +16,8 @@ function Navbar() {
     const time = new Date();
     const hours = time.getUTCHours().toString().padStart(2, "0");
     const minutes = time.getUTCMinutes().toString().padStart(2, "0");
+    setHours(hours);
+    setMinutes(minutes);
     const formattedTime = `${hours}:${minutes} GMT`;
     setCtime(formattedTime);
   };
@@ -106,7 +110,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className={style.time}>{ctime}</div>
+        <div className={style.time}>{hoursDV}<span className={style.blink}>:</span>{minutesDV} GMT</div>
       </div>
       <div className={style.location}>
         <div className={style.xAxis}>{mousePosition.x} : X</div>
