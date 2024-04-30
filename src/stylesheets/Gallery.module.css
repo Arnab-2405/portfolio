@@ -12,17 +12,17 @@
   width: 85%;
   margin: 1rem auto;
   columns: 4;
-  column-gap: 0.8rem;
+  column-gap: 1.2rem;
   box-sizing: border-box;
 }
 
-.background{
+.background {
   background-color: #f2f2f2;
 }
 
 .content .box {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   break-inside: avoid;
   box-sizing: border-box;
 }
@@ -31,11 +31,14 @@
   max-width: 100%;
   border-radius: 15px;
   box-sizing: border-box;
-  transition: transform 0.3s ease;
+  position: relative;
+  box-shadow: 0.2rem 0.2rem 0.3rem #04061a;
+  transition: all 0.4s ease;
 }
 
-.content .box img:hover{
-  transform: scale(1.05);
+.content .box img:hover {
+  transform: rotateX(9deg) rotateY(-20deg) rotateZ(3deg);
+  box-shadow: -0.2rem 0.1rem 01rem #04061a;
 }
 
 @media (max-width: 1200px) {

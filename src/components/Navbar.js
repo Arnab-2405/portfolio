@@ -3,7 +3,7 @@ import style from "../stylesheets/Navbar.module.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [ctime, setCtime] = useState("");
+  const [ ,setCtime] = useState("");
   const [hoursDV, setHours] =useState("00");
   const [minutesDV, setMinutes] =useState("00");
 
