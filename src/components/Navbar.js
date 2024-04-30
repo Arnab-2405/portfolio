@@ -28,7 +28,7 @@ function Navbar() {
       if (element) {
         let offset = 100;
         if (id === "contact") {
-          offset = 0;
+          offset = 30;
         }
         if (id === "project") {
           offset = -50;

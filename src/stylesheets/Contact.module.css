@@ -1,81 +1,79 @@
-.content {
-  width: 100%;
+.content{
+  width: 100vw;
   height: 100vh;
-  background-color: black;
   position: relative;
+  background-color: #f2f2f2;
 }
 
-.base {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.base{
   width: 80%;
-  height: 70%;
-  z-index: 5;
-  max-height: max-content;
-}
-
-.image {
-  background-image: url("../assets/NewDelhi.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 40%;
-}
-
-.overlay {
-  z-index: 6;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.textLayer {
-  z-index: 7;
-  color: #fee720;
+  height: 80%;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
 }
 
-.inputField,
-textarea {
-  display: inline-block;
-  outline: none;
-  width: 40%;
+.base, .getInTouch, .arrow{
+  background-color: #010809;
+}
+
+.formSection{
+  border-radius: 0 2rem 2rem 0;
+  background-color: #ef1657;
+}
+
+.leaf{
+  flex-basis: 25%;
   flex-grow: 0;
   flex-shrink: 0;
-  resize: none;
+  display: flex;
+  align-items: flex-end;
 }
 
-textarea {
-  height: 10rem;
+.getInTouch{
+  flex-basis: 25%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.header {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 1%;
+.text1{
+  align-items: end;
 }
 
-.name,
-.email,
-.message {
+.text1, .text2{
+  display: flex;
+  justify-content: center;
   flex-basis: 100%;
-  font-size: 1.5rem;
-  margin-bottom: 1%;
+  font-size: 5rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.arrow{
+  flex-basis: 2%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.formSection{
+  flex-basis: 40%;
+  padding: 5%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.subHead {
-  flex-basis: 10%;
-}
-
-button {
-  flex-basis: 10%;
-  background: #fee720;
-  outline: none;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: 600;
+.send{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
