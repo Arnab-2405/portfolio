@@ -24,6 +24,12 @@
   flex-shrink: 1;
   height: min-content;
   margin-left: 25%;
+
+  font-size: 6rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .topText span {
@@ -36,6 +42,12 @@
   flex-shrink: 1;
   height: min-content;
   margin-left: 25%;
+
+  font-size: 5rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .imageBox {
@@ -93,6 +105,11 @@
 }
 
 .resume {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-left: 3%;
+
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }

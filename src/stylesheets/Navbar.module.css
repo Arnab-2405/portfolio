@@ -20,14 +20,19 @@
   /* TODO Change shadow color on scroll */
 }
 
-.header {
+.header{
   flex-basis: content;
   flex-shrink: 0;
   flex-grow: 0;
+  font-size: 3rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .list {
-  flex-basis: auto;
+  flex-basis: content;
   flex-shrink: 0;
   flex-grow: 0;
 }
@@ -44,11 +49,25 @@
   margin-right: 5vw;
 }
 
+Link, a{
+  font-size: 1.2rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .time {
   flex-basis: content;
   flex-shrink: 0;
   flex-grow: 0;
+  padding-left: 2%;
   margin-right: 5vw;
+  font-size: 1.2rem;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .scroll-link,a{
@@ -70,6 +89,11 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
+  font-size: 0.9rem;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .blink {
@@ -80,7 +104,7 @@
 }
 
 @keyframes blink {
-  100% {
+  50% {
     opacity: 0;
   }
 }

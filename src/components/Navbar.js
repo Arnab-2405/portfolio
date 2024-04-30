@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [ctime, setCtime] = useState("");
-  const [hoursDV, setHours] =useState("");
-  const [minutesDV, setMinutes] =useState("");
+  const [hoursDV, setHours] =useState("00");
+  const [minutesDV, setMinutes] =useState("00");
 
   useEffect(() => {
-    const intervalId = setInterval(updateTime, 10);
+    const intervalId = setInterval(updateTime, 1000);
     return () => clearInterval(intervalId);
   }, []);
 
