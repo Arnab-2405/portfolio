@@ -1,7 +1,12 @@
 .header {
-  font-size: 3rem;
-  margin: 4%;
+  font-size: 4rem;
+  padding: 4%;
   height: fit-content;
+
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 .content {
   width: 85%;
@@ -9,6 +14,10 @@
   columns: 4;
   column-gap: 0.8rem;
   box-sizing: border-box;
+}
+
+.background{
+  background-color: #f2f2f2;
 }
 
 .content .box {
