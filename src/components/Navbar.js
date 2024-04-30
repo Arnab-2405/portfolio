@@ -30,6 +30,9 @@ function Navbar() {
         if (id === "contact") {
           offset = 0;
         }
+        if (id === "project") {
+          offset = -50;
+        }
         const elementPosition = element.offsetTop - offset;
         window.scrollTo({
           top: elementPosition,
