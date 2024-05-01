@@ -96,7 +96,7 @@ function Intro() {
 
       <div className="content1" id="greetings">
         <div className="rect" id="rectExit"></div>
-        <div id="text">welcome</div>
+        <div id="text">Welcome</div>
       </div>
     </>
   );

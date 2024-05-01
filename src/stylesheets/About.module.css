@@ -6,7 +6,7 @@
 }
 
 .textBox {
-  margin-top: 12%;
+  margin-top: 11%;
   /* margin-left: 15%; */
   height: max-content;
   color: #ffffff;
@@ -44,6 +44,18 @@
   margin-left: 25%;
 
   font-size: 5rem;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hacker{
+  flex-basis: 100%;
+  margin-top: 2%;
+  margin-left: 25%;
+  height: min-content;
+  font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;

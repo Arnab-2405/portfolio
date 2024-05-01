@@ -26,12 +26,12 @@ function Navbar() {
     const handleClick = (id) => {
       const element = document.getElementById(id);
       if (element) {
-        let offset = 100;
+        let offset = 50;
         if (id === "contact") {
           offset = 30;
         }
         if (id === "project") {
-          offset = -50;
+          offset = 100;
         }
         const elementPosition = element.offsetTop - offset;
         window.scrollTo({

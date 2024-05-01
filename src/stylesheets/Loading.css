@@ -14,6 +14,11 @@
   background: #f4f4f4;
   border-radius: 0 0 0 0;
   animation: loader-bar 5000ms normal;
+
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 @keyframes loader-bar {
@@ -35,6 +40,8 @@
   bottom: 3%;
   right: 2%;
   color: #f4f4f4;
+  font-size: 2rem;
+
 }
 
 .base {
@@ -43,6 +50,9 @@
   left: 2%;
   font-size: 6vh;
   z-index: 5;
+
+  font-size: 2rem;
+
 }
 
 .initializing-2 {

@@ -43,6 +43,11 @@ video {
 }
 
 .glitch-btn {
+  font-size: 4rem;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
   text-shadow: 0.5vh 0 0 rgba(255, 0, 0, 0.75),
     -0.25vh -0.5vh 0 rgba(0, 255, 0, 0.75), 0.25vh 0.5vh 0 rgba(0, 0, 255, 0.75);
 
