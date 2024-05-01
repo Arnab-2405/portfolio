@@ -1,11 +1,11 @@
-.content{
+.content {
   width: 100vw;
   height: 100vh;
   position: relative;
   background-color: #f2f2f2;
 }
 
-.base{
+.base {
   width: 80%;
   height: 80%;
   display: flex;
@@ -16,16 +16,18 @@
   border-radius: 2rem;
 }
 
-.base, .getInTouch, .arrow{
+.base,
+.getInTouch,
+.arrow {
   background-color: #010809;
 }
 
-.formSection{
+.formSection {
   border-radius: 0 2rem 2rem 0;
   background-color: #ef1657;
 }
 
-.leaf{
+.leaf {
   flex-basis: 25%;
   flex-grow: 0;
   flex-shrink: 0;
@@ -33,20 +35,22 @@
   align-items: flex-end;
 }
 
-.getInTouch{
+.getInTouch {
   flex-basis: 25%;
   flex-grow: 0;
   flex-shrink: 0;
   color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
+  height: 70%;
 }
 
-.text1{
+.text1 {
   align-items: end;
 }
 
-.text1, .text2{
+.text1,
+.text2 {
   display: flex;
   justify-content: center;
   flex-basis: 100%;
@@ -57,13 +61,13 @@
   font-style: normal;
 }
 
-.arrow{
+.arrow {
   flex-basis: 2%;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.formSection{
+.formSection {
   flex-basis: 40%;
   padding: 5%;
   display: flex;
@@ -72,8 +76,13 @@
   flex-wrap: wrap;
 }
 
-.send{
+.send {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+TextField,
+.formSection div {
+  margin-bottom: 5%;
 }
