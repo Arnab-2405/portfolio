@@ -6,10 +6,12 @@ import Gallery from './Gallery'
 import Contact from './Contact'
 import ProgressBar from "react-scroll-progress-bar";
 import Experience from './Experience'
+import Cursor from './Cursor'
 
 function Home() {
   return (
     <>
+    <Cursor></Cursor>
     <ProgressBar bgcolor="#ef1657"/>
     <Navbar></Navbar>
     <About></About>
