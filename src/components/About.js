@@ -29,11 +29,11 @@ function About() {
       }
 
       iteration += 1 / 40;
-    }, 5);
+    }, 10);
   };
 
   useEffect(() => {
-    handleMouseOver(); // Run the animation when the component mounts
+    handleMouseOver();
   }, []);
 
   const handleDownload = () => {
@@ -56,6 +56,7 @@ function About() {
         </div>
         <div className={style.bottomText}>Arnab</div>
         <h1 className={style.hacker}>{hackerText}</h1>
+        <div className={style.blink}>|</div>
         <div className={style.content1}>
           <div className={style.line}></div>
           <div className={style.shape} onClick={handleDownload}>

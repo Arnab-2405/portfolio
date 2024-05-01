@@ -33,7 +33,7 @@
 }
 
 .topText span {
-  color: rgb(239, 22, 87);
+  color: #ef1657;
 }
 
 .bottomText {
@@ -51,7 +51,7 @@
 }
 
 .hacker{
-  flex-basis: 100%;
+  flex-basis: content;
   margin-top: 2%;
   margin-left: 25%;
   height: min-content;
@@ -60,6 +60,21 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+.blink {
+  display: flex;
+  align-items: center;
+  animation: blink 1s infinite;
+  color: #3fbdc7;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .imageBox {
@@ -124,4 +139,17 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.blink {
+  animation: blink 1s infinite;
+  color: #3fbdc7;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
