@@ -12,14 +12,14 @@ import Timeline from './Timeline'
 function Home() {
   return (
     <>
-    {/* <Cursor></Cursor>
+    <Cursor></Cursor>
     <ProgressBar bgcolor="#ef1657"/>
     <Navbar></Navbar>
-    <About></About> */}
+    <About></About>
     <Experience></Experience>
     <Timeline></Timeline>
-    {/* <Project></Project>
-    <Gallery></Gallery> */}
+    <Project></Project>
+    <Gallery></Gallery>
     <Contact></Contact>
     </>
   )

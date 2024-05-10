@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import style from "../stylesheets/Timeline.module.css";
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../assets/animate.json";
-import cgi from "../assets/company/cgi.jpg"
+import timelineData from "../datasets/timeline.json";
 
 function Timeline() {
   const [filledHeight, setFilledHeight] = useState(0);
@@ -25,33 +25,42 @@ function Timeline() {
   }, []);
 
   return (
-    <div className={style.flexbox}>
-      <div className={style.timeline}>
-        <div
-          className={style.filled}
-          style={{ height: `${filledHeight}%` }}
-        ></div>
-      </div>
-      <div className={style.rightCard}>
-        <div className={style.content}>
-          <>
-            <div className={style.arrow}></div>
-            <div className={style.card}>
-              <img src={cgi} alt="image"></img>
-              <div className={style.text}>
-                <h3>Software Developer</h3>
-                <h4>2023 - Present</h4>
-                <h5>CGI Inc.</h5>
-              </div>
-            </div>
-            <div className={style.pseduo}></div>
-          </>
+    <>
+      <div className={style.title}>Timeline</div>
+      <div className={style.flexbox}>
+        <div className={style.timeline}>
+          <div
+            className={style.filled}
+            style={{ height: `${filledHeight}%` }}
+          ></div>
         </div>
-        <div className={style.svg}>
-          <Lottie className={style.image} animationData={groovyWalkAnimation} loop={true} />
+        <div className={style.rightCard}>
+          <div className={style.content}>
+            {timelineData.map((item, index) => (
+              <React.Fragment key={index}>
+                <div className={style.arrow}></div>
+                <div className={style.card}>
+                  <img src={item.image} alt="image"></img>
+                  <div className={style.text}>
+                    <h3>{item.jobTitle}</h3>
+                    <h4>{item.date}</h4>
+                    <h5>{item.company}</h5>
+                  </div>
+                </div>
+                <div className={style.pseduo}></div>
+              </React.Fragment>
+            ))}
           </div>
+          <div className={style.svg}>
+            <Lottie
+              className={style.image}
+              animationData={groovyWalkAnimation}
+              loop={true}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

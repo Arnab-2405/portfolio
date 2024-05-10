@@ -11,7 +11,7 @@
 .content {
   width: 85%;
   margin: 0rem auto;
-  columns: 4;
+  columns: 5;
   column-gap: 1.2rem;
   box-sizing: border-box;
 }
@@ -30,17 +30,20 @@
   box-sizing: border-box;
 }
 
-.content .box img {
+.content .box img,
+.content .box video {
   max-width: 100%;
-  border-radius: 15px;
+  border-radius: 5px;
   box-sizing: border-box;
   position: relative;
-  box-shadow: 0.2rem 0.2rem 0.3rem #04061a;
-  transition: all 0.4s ease;
+  box-shadow: 0.1rem 0.1rem 0.5rem #010809;
+  transition: all 0.7s ease;
 }
 
-.content .box img:hover {
-  transform: rotateX(9deg) rotateY(-20deg) rotateZ(3deg);
+.content .box img:hover,
+.content .box video:hover {
+  transform: scale(1.2);
+  z-index: 10;
   box-shadow: -0.2rem 0.1rem 01rem #04061a;
 }
 
