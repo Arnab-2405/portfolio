@@ -5,8 +5,13 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/system";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const service_id = "service_op1fc9e";
+  const template_id = "template_5iid96t";
+  const publicKey1 = "cn98zWB9VbmVps8KP";
+
   const CustomButton = styled(Button)({
     backgroundColor: "#010809",
     color: "#f2f2f2",
@@ -21,11 +26,7 @@ function Contact() {
     message: "",
   };
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(defaultFormData);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -33,8 +34,15 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    emailjs.send(service_id, template_id, formData, publicKey1).then(
+      () => {
+        console.log("SUCCESS!");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
 
-    const jsonData = JSON.stringify(formData);
     setFormData(defaultFormData);
   };
 
@@ -112,7 +120,6 @@ function Contact() {
                     },
                   },
                 },
-                // Label
                 "& .MuiInputLabel-standard": {
                   color: "#f2f2f2",
                   fontFamily: "Quicksand, sans-serif",
@@ -145,7 +152,6 @@ function Contact() {
                 },
                 "& .MuiOutlinedInput-input": {
                   color: "#f2f2f2",
-
                 },
                 "& .MuiInputLabel-root": {
                   color: "#f2f2f2",
