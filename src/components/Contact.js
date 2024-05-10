@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/system";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Snackbar from '@mui/material/Snackbar';
 
 function Contact() {
   const service_id = "service_op1fc9e";
@@ -36,15 +37,31 @@ function Contact() {
     event.preventDefault();
     emailjs.send(service_id, template_id, formData, publicKey1).then(
       () => {
+        setCheck(true)
+        setOpen(true)
         console.log("SUCCESS!");
       },
       (error) => {
+        setCheck(false)
+        setOpen(true);
         console.log("FAILED...", error);
       }
     );
 
     setFormData(defaultFormData);
   };
+
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+  
+    setOpen(false);
+  };
+
+  const [check,setCheck]=useState(false);
 
   return (
     <>
@@ -178,6 +195,12 @@ function Contact() {
             </div>
           </div>
         </div>
+        <Snackbar
+        open={open}
+        autoHideDuration={5000}
+        onClose={handleClose}
+        message={check?"Message has been successfully recieved!":"Something went wrong!"}
+      />
       </div>
     </>
   );
