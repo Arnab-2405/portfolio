@@ -7,17 +7,19 @@ import Contact from './Contact'
 import ProgressBar from "react-scroll-progress-bar";
 import Experience from './Experience'
 import Cursor from './Cursor'
+import Timeline from './Timeline'
 
 function Home() {
   return (
     <>
-    <Cursor></Cursor>
+    {/* <Cursor></Cursor>
     <ProgressBar bgcolor="#ef1657"/>
     <Navbar></Navbar>
-    <About></About>
+    <About></About> */}
     <Experience></Experience>
-    <Project></Project>
-    <Gallery></Gallery>
+    <Timeline></Timeline>
+    {/* <Project></Project>
+    <Gallery></Gallery> */}
     <Contact></Contact>
     </>
   )

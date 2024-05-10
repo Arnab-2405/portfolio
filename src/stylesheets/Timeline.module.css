@@ -1,0 +1,32 @@
+.flexbox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: blueviolet;
+  position: relative;
+}
+
+/* .timeline, */
+.rightCard {
+  flex-basis: 73%;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
+
+.rightCard {
+  justify-content: flex-start;
+}
+
+.timeline {
+  flex-basis: 1%;
+  background-color: red;
+  height: 100%;
+}
+
+.filled {
+  width: 1vw;
+  background-color: gold;
+  z-index: 999;
+}
