@@ -40,7 +40,7 @@ function Timeline() {
               <React.Fragment key={index}>
                 <div className={style.arrow}></div>
                 <div className={style.card}>
-                  <img src={item.image} alt="image"></img>
+                  <img src={item.image} alt="images"></img>
                   <div className={style.text}>
                     <h3>{item.jobTitle}</h3>
                     <h4>{item.date}</h4>
